@@ -54,7 +54,7 @@ async function loadDashboard() {
 
 loadDashboard();
 
-setInterval(loadDashboard, 60000);
+setInterval(loadDashboard, 10000);
 const faqQuestions = document.querySelectorAll(".faq-question");
 
 faqQuestions.forEach(question => {
