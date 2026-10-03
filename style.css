@@ -405,43 +405,152 @@ section p {
    HACKATHON
 ========================================================= */
 
+/* =========================================================
+   HACKATHON - ROUND 1 & ROUND 2
+========================================================= */
+
 #hackathon {
     background: #100b1c;
+    text-align: center;
 }
 
-#hackathon > div {
-    display: inline-block;
+#hackathon h2 {
+    text-align: center;
+    margin-bottom: 55px;
+}
 
-    vertical-align: top;
 
-    width: 45%;
+/* ROUND 1 & ROUND 2 SIDE BY SIDE */
 
-    margin: 10px;
+.rounds-grid {
+    max-width: 1200px;
+    margin: 0 auto;
 
-    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
 
-    border-radius: 20px;
 
-    background: rgba(255, 255, 255, 0.05);
+/* ROUND CARD */
+
+.round-card {
+    min-height: 480px;
+
+    padding: 40px 35px;
+
+    text-align: left;
+
+    border-radius: 26px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.07),
+        rgba(255, 255, 255, 0.025)
+    );
 
     border: 1px solid rgba(255, 255, 255, 0.1);
 
-    transition: 0.3s ease;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+
+    transition: 0.35s ease;
 }
 
-#hackathon > div:hover {
-    transform: translateY(-8px);
 
-    border-color: #ff5fd2;
+/* CARD HOVER */
+
+.round-card:hover {
+    transform: translateY(-10px);
+
+    border-color: rgba(255, 95, 210, 0.6);
 
     box-shadow:
-        0 20px 50px rgba(255, 78, 205, 0.15);
+        0 25px 70px rgba(255, 78, 205, 0.18);
 }
 
-#hackathon h3 {
+
+/* ROUND TITLE */
+
+.round-card h3 {
     color: #ff5fd2;
 
-    margin-bottom: 15px;
+    font-size: 24px;
+
+    margin-bottom: 28px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ROUND DETAILS */
+
+.round-card p {
+    color: #c3bccd;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin: 15px 0;
+
+    padding: 8px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+/* LAST POINT */
+
+.round-card p:last-child {
+    border-bottom: none;
+
+    color: #ff72d6;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+/* QUALIFICATION FLOW */
+
+.qualification-flow {
+    margin: 35px auto 0;
+
+    text-align: center;
+}
+
+.qualification-flow p {
+    display: inline-block;
+
+    margin: 0 10px;
+
+    padding: 12px 25px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 79, 216, 0.15),
+        rgba(124, 92, 255, 0.15)
+    );
+
+    border: 1px solid rgba(255, 95, 210, 0.4);
+
+    color: #ffffff;
+
+    font-weight: 800;
+
+    font-size: 16px;
+}
+
+.qualification-flow span {
+    color: #ff5fd2;
+
+    font-size: 28px;
+
+    font-weight: bold;
 }
 
 
@@ -1300,12 +1409,15 @@ footer p {
     .hero h2 {
         font-size: 70px;
     }
+    .rounds-grid {
+    grid-template-columns: 1fr;
+}
 
-    #hackathon > div {
-        width: 100%;
+.round-card {
+    min-height: auto;
+}
 
-        margin: 10px 0;
-    }
+  
 
     .dashboard-cards,
     .dashboard-grid {
